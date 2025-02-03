@@ -11,8 +11,11 @@
 4. Create virtual environment with this command:
 ``python -m venv ./env``
 
-5. Install all required dependencies with this command:
+5. Use the virtual environment with this command:
+``env\Scripts\activate``
+
+6. Install all required dependencies with this command:
 ``pip install -r requirements.txt``
 
-3. Run the server with this command:
+7. Run the server with this command:
 ``python main.py``
