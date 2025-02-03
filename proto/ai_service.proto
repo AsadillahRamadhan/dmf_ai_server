@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package ai;
+
+service AIService {
+  rpc AnalyzeData (DataRequest) returns (DataResponse);
+}
+
+message DataRequest {
+  string device_id = 1;
+  float operation_time = 2;
+  float rotation_rpm = 3;
+  float power_consume = 4;
+  bool magnet_avail = 5;
+  float magnet_strength = 6;
+  bool magnet_active = 7;
+}
+
+message DataResponse {
+  float rotation_rpm = 1;
+  float magnet_strength = 2;
+  bool magnet_active = 3;
+}
