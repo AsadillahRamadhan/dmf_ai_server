@@ -11,7 +11,6 @@ load_dotenv()
 class AIService(ai_service_pb2_grpc.AIServiceServicer):
     def AnalyzeData(self, request, context):
         data = process(request)
-        print(os.environ)
         return ai_service_pb2.DataResponse(
             rotation_rpm=1600,
             magnet_strength=0.8,
